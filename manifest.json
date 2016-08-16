@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name" : "Jira Standart Text plugin", 
+  "description" : "Plugin template task for Jira",
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": true
+   	},
+  "content_scripts": [
+    {
+       "js": ["data/js/app.js", "data/js/template.js"],
+       "matches": ["*://*/*"],
+       "run_at": "document_start",
+       "all_frames": false
+    }
+  ],
+	"version" : "2.0",
+  "icons": {
+      "16":"data/img/add16.png",
+      "32":"data/img/add32.png",
+      "48":"data/img/add48.png",
+      "64":"data/img/add64.jpg",
+      "128":"data/img/add128.png"
+   },
+   "permissions": [
+    "tabs",
+    "clipboardRead",
+    "clipboardWrite"
+  ]
+}
