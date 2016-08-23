@@ -21,7 +21,7 @@ let App = (function(){
     };
 
      App.prototype.responseListenersPostMessage = function(response){
-
+        
         let body = (JSON.parse(response)).body.view.value,
             hiddenElement = document.createElement('div');
 

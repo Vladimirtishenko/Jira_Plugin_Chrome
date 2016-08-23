@@ -28,7 +28,7 @@ let Template = (function(){
 	Template.prototype.rightGenerateTemplateDiscription = function(paragraph){
 		let str = "";
 		for(p of paragraph){
-			str += p.innerText + "\n";
+			str += (p.textContent.indexOf("*") == 0 && p.textContent.lastIndexOf("*") > -1) ? "\n" + p.textContent + "\n\n" : p.textContent + "\n";
 		}
 		return str;
 	};
